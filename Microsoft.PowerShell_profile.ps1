@@ -1,6 +1,4 @@
-Import-Module posh-git
-Import-Module oh-my-posh
-Set-Theme Paradox
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\thecyberden.omp.json" | Invoke-Expression
 
 $env:FZF_DEFAULT_COMMAND="fd --type f"
 $env:FZF_CTRL_T_COMMAND="fd --type f"
@@ -33,30 +31,3 @@ function gitgg {
 function gitbd {
     git branch | % {if($_[0] -eq " "){($_ -Split " ")[2]}} | % {git branch -D $_}
 }
-
-function youtubeDL_Audio {
-    yt-dlp $Args[0] -i -x --audio-format best --audio-quality 0 -o "C:\Users\Shimo\Documents\Youtube\Audio\%(title)s.%(ext)s"
-}
-
-function youtubeDL_Audio_Playlist {
-    $date = Get-Date -Format "yyyy_MM_dd"
-    yt-dlp $Args[0] -i -x --audio-format best --audio-quality 0 -o "C:\Users\Shimo\Documents\Youtube\Audio_playlist\%(playlist_title)s\$date\%(playlist_index)s_%(title)s.%(ext)s"
-}
-
-# 参考: https://hchch.net/youtube-dl-command-2021/
-function youtubeDL_Movie {
-    yt-dlp $Args[0] -i -f bestvideo+bestaudio/best -o "C:\Users\Shimo\Documents\Youtube\Movie\%(title)s - %(channel)s.%(ext)s" --add-metadata --embed-thumbnail --merge-output-format mkv -N 10
-}
-
-function youtubeDL_Movie_Playlist {
-    yt-dlp $Args[0] -i -f bestvideo+bestaudio/best -o "C:\Users\Shimo\Documents\Youtube\Movie_playlist\%(playlist_title)s\%(title)s.%(ext)s" --add-metadata --embed-thumbnail --merge-output-format mkv -N 10
-}
-
-function youtubeDL_NicoNico {
-    cd C:\Users\Shimo\Documents\github\youtube-dl\
-    python -m youtube_dl $Args[0]
-    start .
-    cd C:\Users\Shimo\Documents\Youtube\Movie
-    start .
-}
-
