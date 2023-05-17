@@ -149,8 +149,11 @@ repo = 'itchyny/calendar.vim'
 # --- fzf
 [[plugins]]
 repo = 'junegunn/fzf'
+build = './install --all'
+merged = '0'
 [[plugins]]
 repo = 'junegunn/fzf.vim'
+depends = 'fzf'
 hook_add = '''
     "nnoremap <C-p> :call FzfOmniFiles()<cr>
     nnoremap <C-p> :FZF<cr>
