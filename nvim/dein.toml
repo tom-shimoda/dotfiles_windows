@@ -153,11 +153,11 @@ build = './install --all'
 merged = '0'
 [[plugins]]
 repo = 'junegunn/fzf.vim'
-depends = 'fzf'
+depends = ['junegunn/fzf']
 hook_add = '''
     "nnoremap <C-p> :call FzfOmniFiles()<cr>
     nnoremap <C-p> :FZF<cr>
-    nnoremap <C-g> :Rg<Space>
+    nnoremap <C-g> :Rg<cr>
 
     " fzf (C-p)
     "fun! FzfOmniFiles()

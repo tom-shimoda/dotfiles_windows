@@ -123,7 +123,7 @@ let g:python_host_prog = $HOME . '/.pyenv/versions/neovim2/bin/python'
 let g:python3_host_prog = 'C:\Users\t.shimoda\AppData\Local\Programs\Python\Python38-32\python'
 
 "vimrcの再読込
-nnoremap <Space>g :source ~/.config/nvim/init.vim<CR>
+nnoremap <Space>g :source ~/AppData/Local/nvim/init.vim<CR>
 "space割り当て解除 (誤爆を防ぐため)
 nnoremap <Space> <Nop>
 "3行飛び上下移動
