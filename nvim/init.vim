@@ -165,8 +165,8 @@ nnoremap <C-h> <C-w>W
 nnoremap <C-l> <C-w>w
 "行コピー
 nnoremap <S-y> yy
-"yankしたものをpaste (上書きpasteした際にレジスタが置き換わってしまうのを回避)
-noremap p "0p
+"yankしたものをpaste (範囲選択ペースト時のみ、上書きpasteによるレジスタ置き換えを回避)
+vnoremap p "0p
 
 " --- rainbow
 let g:rainbow_active = 1
