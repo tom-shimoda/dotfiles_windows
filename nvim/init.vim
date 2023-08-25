@@ -144,6 +144,8 @@ nnoremap <Space><Enter> G
 nnoremap <Space>y wbvey
 "カーソル下のシンボルをカット
 nnoremap <Space>c wbvec
+"カーソル下のシンボルにペースト
+nnoremap <Space>p wbve"0p
 "行の連結
 noremap <Space>j gJ
 "前回のカーソル位置に戻る
