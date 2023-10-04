@@ -6,7 +6,14 @@ $env:FZF_CTRL_T_COMMAND="fd --type f"
 $env:FZF_ALT_C_COMMAND="fd --type d"
 
 function cdFzf {
-    cd "$(Split-Path -Parent $(fzf))"
+    $path = fzf
+    if ([string]::IsNullOrEmpty($path))
+    {
+    }
+    else
+    {
+        cd "$(Split-Path -Parent $path)"
+    }
 }
 sal cdd cdFzf
 
