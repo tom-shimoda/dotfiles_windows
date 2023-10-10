@@ -158,6 +158,13 @@ noremap <C-c> "*yy
 nnoremap <C-h> <C-w>W
 nnoremap <C-l> <C-w>w
 
+" 終了時にdapuiを閉じる
+map ZZ :call Exit()<cr>
+fun! Exit()
+    :lua require("dapui").close()
+    :q!
+endfun
+
 " --- コピー系
 "行コピー
 nnoremap <S-y> yy
