@@ -307,6 +307,7 @@ hook_add = '''
 repo = 'vim-scripts/AmbiCompletion'
 
 # nvimでgoのデバッグ環境構築 (https://zenn.dev/saito9/articles/32c57f776dc369)
+# 他にDelveが必要なので 'go install github.com/go-delve/delve/cmd/dlv@latest' をコマンドライン実行して取得
 # --- nvim-dap
 [[plugins]]
 repo = 'mfussenegger/nvim-dap'
