@@ -140,12 +140,6 @@ nnoremap <Space>r *N:%s//
 
 "行番号移動
 nnoremap <Space><Enter> G
-"カーソル下のシンボルをコピー
-nnoremap <Space>y wbvey
-"カーソル下のシンボルをカット
-nnoremap <Space>c wbvec
-"カーソル下のシンボルにペースト
-nnoremap <Space>p wbve"0p
 "行の連結
 noremap <Space>j gJ
 "前回のカーソル位置に戻る
@@ -163,10 +157,32 @@ noremap <C-c> "*yy
 "ウィンドウフォーカスの移動
 nnoremap <C-h> <C-w>W
 nnoremap <C-l> <C-w>w
+
+" --- コピー系
 "行コピー
 nnoremap <S-y> yy
+"削除系アクション実行時にコピーレジスタに入れるように変更
+vnoremap c "0c
+vnoremap x "0x
+vnoremap d "0d
+vnoremap D "0D
+nnoremap di( "0di(
+nnoremap di[ "0di[
+nnoremap di{ "0di{
+nnoremap di' "0di'
+nnoremap di" "0di"
+nnoremap D "0D
+nnoremap dd "0dd
+"カーソル下のシンボルをコピー
+nnoremap <Space>y wbvey
+"カーソル下のシンボルをカット
+nnoremap <Space>c wbvec
+"カーソル下のシンボルにペースト
+nnoremap <Space>p wbve"0p
+
 "yankしたものをpaste (範囲選択ペースト時のみ、上書きpasteによるレジスタ置き換えを回避)
 vnoremap p "0p
+vnoremap P "0P
 
 " --- rainbow
 let g:rainbow_active = 1

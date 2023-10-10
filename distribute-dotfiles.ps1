@@ -12,3 +12,6 @@ Copy-Item -Recurse -Force settings.json ~\AppData\Local\Packages\Microsoft.Windo
 
 Copy-Item -Recurse -Force .gitconfig ~
 Copy-Item -Recurse -Force .gitconfig_private ~
+
+# デバッグ実行関連の設定ファイル
+Copy-Item -Recurse -Force nvim-dap.lua ~

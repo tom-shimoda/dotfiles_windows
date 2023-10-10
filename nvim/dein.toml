@@ -236,6 +236,7 @@ hook_add = '''
     nmap <silent> gr <Plug>(coc-references)
     nnoremap <silent> == :call CocAction('format')<CR>
     nnoremap <silent> ghh :call <SID>show_documentation()<CR>
+    nmap <silent> <M-CR> <Plug>(coc-codeaction-cursor)
 
     function! s:show_documentation()
         if (index(['vim','help'], &filetype) >= 0)
@@ -305,3 +306,16 @@ hook_add = '''
 [[plugins]]
 repo = 'vim-scripts/AmbiCompletion'
 
+# nvimでgoのデバッグ環境構築 (https://zenn.dev/saito9/articles/32c57f776dc369)
+# --- nvim-dap
+[[plugins]]
+repo = 'mfussenegger/nvim-dap'
+hook_add = '''
+  source ~/nvim-dap.lua
+'''
+# --- nvim-dap-ui
+[[plugins]]
+repo = 'rcarriga/nvim-dap-ui'
+# --- nvim-dap-go
+[[plugins]]
+repo = 'leoluz/nvim-dap-go'
