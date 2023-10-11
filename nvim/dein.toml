@@ -239,6 +239,7 @@ hook_add = '''
     nmap <silent> <A-Enter> <Plug>(coc-codeaction-cursor)
     nmap <silent> gan <Plug>(coc-diagnostic-next)
     nmap <silent> gab <Plug>(coc-diagnostic-prev)
+    nmap <silent> <Space>r <Plug>(coc-rename)
     
 
     function! s:show_documentation()
