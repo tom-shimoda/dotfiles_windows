@@ -158,9 +158,12 @@ noremap <C-c> "*yy
 nnoremap <C-h> <C-w>W
 nnoremap <C-l> <C-w>w
 
-" 終了時にdapuiを閉じる
+" 終了時処理
 map ZZ :call Exit()<cr>
 fun! Exit()
+    " nvim-tree閉じる
+    :NvimTreeClose
+    " dap-ui閉じる
     :lua require("dapui").close()
     :q!
 endfun

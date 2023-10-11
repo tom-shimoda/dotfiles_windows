@@ -14,9 +14,10 @@ map("n", "<F12>", ":lua require'dap'.step_out()<CR>", { silent = true})
 map("n", "<leader>bc", ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>", { silent = true})
 map("n", "<leader>l", ":lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>", { silent = true})
 
+
 -- dap-ui key map
 map("n", "<leader>d", ":lua require'dapui'.toggle()<CR>", { silent = true})
-map("n", "<leader><leader>df", ":lua require'dapui'.eval()<CR>", { silent = true})
+map("n", "<leader>e", ":lua require'dapui'.eval()<CR>", { silent = true})
 
 -- dap-go key map
 map("n", "<leader>td", ":lua require'dap-go'.debug_test()<CR>", { silent = true })
@@ -54,7 +55,8 @@ require("dapui").setup({
 				"watches",
 			},
 			size = 40, -- 40 columns
-			position = "left",
+			-- position = "left",
+			position = "right",
 		},
 		{
 			elements = {
