@@ -2,7 +2,7 @@
     name = tom-shimoda
     email = tom-shimoda@example.com
 [core]
-    autocrlf = true
+    autocrlf = false
     pager = delta
 [interactive]
     diffFilter = delta --color-only

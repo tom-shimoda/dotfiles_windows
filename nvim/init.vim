@@ -191,6 +191,8 @@ nnoremap <Space>c wbvec
 nnoremap <Space>p wbve"0p
 
 "yankしたものをpaste (範囲選択ペースト時のみ、上書きpasteによるレジスタ置き換えを回避)
+nnoremap p "0p
+nnoremap P "0P
 vnoremap p "0p
 vnoremap P "0P
 

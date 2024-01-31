@@ -52,6 +52,7 @@
     {
         "defaults": 
         {
+            "colorScheme": "Campbell",
             "font": 
             {
                 "face": "Cascadia Mono"
@@ -325,6 +326,8 @@
             "yellow": "#808000"
         }
     ],
+    "tabWidthMode": "equal",
+    "theme": "dark",
     "themes": 
     [
         {
@@ -369,5 +372,6 @@
                 "useMica": false
             }
         }
-    ]
+    ],
+    "useAcrylicInTabRow": false
 }
