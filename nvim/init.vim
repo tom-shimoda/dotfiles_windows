@@ -73,6 +73,8 @@ set noswapfile
 set nobackup
 "undoファイル出力無効
 set noundofile
+"1行の最大文字数ボーダーライン表示
+set colorcolumn=120
 
 "更新時間
 set updatetime=300
@@ -113,6 +115,10 @@ set completeopt=menuone
 " カーソル行をハイライト
 set cursorline
 
+" 不可視文字を可視化
+set listchars=eol:↩,tab:»-,trail:_
+set list
+
 " 改行時の自動コメント化をしない
 autocmd BufNewFile,BufRead * setlocal formatoptions-=c
 autocmd BufNewFile,BufRead * setlocal formatoptions-=r
@@ -126,6 +132,8 @@ let g:python3_host_prog = 'C:\Users\t.shimoda\AppData\Local\Programs\Python\Pyth
 nnoremap <Space>g :source ~/AppData/Local/nvim/init.vim<CR>
 "space割り当て解除 (誤爆を防ぐため)
 nnoremap <Space> <Nop>
+"tmuxで利用するので無効化
+nnoremap <C-q> <Nop>
 "3行飛び上下移動
 noremap <S-j> jjj
 noremap <S-k> jjj
@@ -224,7 +232,6 @@ function! ToggleBetweenHeaderAndSource() abort
 endfunction
 
 " encode utf-8 lf
-nnoremap <Space>o :call ToUtf8Lf()<cr>
 function! ToUtf8() abort
     execute 'e ++enc=shift-jis'
     execute 'set fenc=utf-8'
@@ -271,3 +278,7 @@ nnoremap <silent> <C-u> <cmd>call <SID>smooth_scroll('up')<CR>
 nnoremap <silent> <C-d> <cmd>call <SID>smooth_scroll('down')<CR>
 vnoremap <silent> <C-u> <cmd>call <SID>smooth_scroll('up')<CR>
 vnoremap <silent> <C-d> <cmd>call <SID>smooth_scroll('down')<CR>
+
+" yank内容をクリップボードへ
+set clipboard=unnamed
+
