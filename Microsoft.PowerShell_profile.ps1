@@ -1,5 +1,4 @@
 oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\thecyberden.omp.json" | Invoke-Expression
-Import-Module posh-git
 
 $env:FZF_DEFAULT_COMMAND="fd --type f"
 $env:FZF_CTRL_T_COMMAND="fd --type f"
