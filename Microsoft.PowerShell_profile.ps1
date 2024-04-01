@@ -1,3 +1,4 @@
+# 参考: https://github.com/JanDeDobbeleer/oh-my-posh/discussions/2219
 oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\thecyberden.omp.json" | Invoke-Expression
 
 $env:FZF_DEFAULT_COMMAND="fd --type f"
